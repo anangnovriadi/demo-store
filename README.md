@@ -26,7 +26,7 @@
     
     npm run dev
 
-### Step 5: Run application
+### Step 5: Run test
     
     npm run test
 
