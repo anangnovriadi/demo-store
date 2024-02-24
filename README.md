@@ -34,7 +34,7 @@
    
     3. [GET] /cart/:product_id => this endpoint will check product can add to cart or not
    
-    4. [POST] /checkout => this api for send data order like qty, sub_total 
+    4. [POST] /checkout => this api for send data order like qty, sub_total and also get total_price in response result
 
 ### Postman Doc: https://documenter.getpostman.com/view/4835843/2sA2rCUgo6
 
