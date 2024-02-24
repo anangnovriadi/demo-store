@@ -74,6 +74,4 @@ let env = new environment(
   "http://" + process.env.NODE_HOST + ":" + port
 );
 
-console.table(env);
-
 module.exports = app;

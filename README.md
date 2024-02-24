@@ -31,4 +31,4 @@
 
 ## License
 
-[anangnovriadi](github.com/anangnovriadi)
+[anangnovriadi](https://github.com/anangnovriadi)
