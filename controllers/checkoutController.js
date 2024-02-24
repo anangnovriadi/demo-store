@@ -5,6 +5,8 @@ const models = require("../models");
 const checkout = async (req, res) => {
   try {
     const payload = req.body.data;
+    let totalPrice = 0;
+    let data = [];
 
     if (payload.length > 0) {
       for (let i = 0; i < payload.length; i++) {
@@ -75,13 +77,19 @@ const checkout = async (req, res) => {
           }
         );
 
-        await models.order.create({
+        const order = {
           product_id: payload[i].product_id,
           qty: Number(payload[i].qty),
           tax: Number(payload[i].tax),
           sub_total:
             product.price * Number(payload[i].qty) - Number(payload[i].tax)
-        });
+        };
+
+        await models.order.create(order);
+
+        data.push(order);
+        totalPrice +=
+          product.price * Number(payload[i].qty) - Number(payload[i].tax);
       }
     }
 
@@ -90,7 +98,10 @@ const checkout = async (req, res) => {
       res,
       {
         message: "success",
-        data: payload
+        data: {
+          total_price: totalPrice,
+          order: data
+        }
       },
       "info",
       200

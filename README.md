@@ -26,6 +26,15 @@
     
     npm run dev
 
+### API
+    
+    1. [GET] /products => this endpoint will get all list of product
+   
+    2. [GET] /product/:id => this endpoint will get detail of product
+   
+    3. [GET] /cart/:product_id => this endpoint will check product can add to cart or not
+   
+    4. [POST] /checkout => this api for send data order like qty, sub_total 
 
 ### Postman Doc: https://documenter.getpostman.com/view/4835843/2sA2rCUgo6
 
