@@ -26,6 +26,10 @@
     
     npm run dev
 
+### Step 5: Run application
+    
+    npm run test
+
 ### API
     
     1. [GET] /products => this endpoint will get all list of product
